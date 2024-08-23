@@ -1,0 +1,69 @@
+@use '../../abstract' as a;
+
+.founder-section {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  margin-top: 35rem;
+  position: relative;
+  width: min(70rem, 95%);
+
+  @include a.breakpoint(medium) {
+    margin-top: 20rem;
+    display: flex;
+  }
+
+  @include a.breakpoint(large) {
+    margin-top: 27.5rem;
+  }
+
+  &__image {
+    position: absolute;
+    top: -16rem;
+    z-index: 0;
+    width: min(90%, 20rem);
+
+    @include a.breakpoint(medium) {
+      top: -10rem;
+    }
+
+    @include a.breakpoint(large) {
+      width: min(90%, 30rem);
+      top: -16rem;
+    }
+  }
+
+  &__text-area {
+    display: grid;
+    justify-items: center;
+    gap: 2rem;
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+    color: var(--clr-white);
+    background-color: var(--clr-primary-color-purple);
+
+    @include a.breakpoint(medium) {
+      justify-items: flex-start;
+      text-align: left;
+      padding: 3.5rem;
+      margin-left: 16rem;
+    }
+
+    @include a.breakpoint(large) {
+      margin-left: 24rem;
+      padding: 4rem;
+    }
+  }
+
+  &__decoration-image {
+    position: absolute;
+    display: none;
+
+    @include a.breakpoint(medium) {
+      display: inline;
+      bottom: -6rem;
+      right: 2rem
+    }
+  }
+}

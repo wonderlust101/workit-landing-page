@@ -1,0 +1,20 @@
+@use '../abstract' as a;
+
+.landing-page-layout {
+  display: grid;
+  gap: 5rem;
+  background-image: url('../images/bg-background-1-mobile.svg'), url('../images/bg-background-2-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 25rem, 100% 70rem;
+  background-position: top, 0 24rem;
+
+  @include a.breakpoint(medium) {
+    background-size: 100% 35rem, 100% 57.5rem;
+    background-position: top, 0 30rem;
+  }
+
+  @include a.breakpoint(large) {
+    background-size: 100% 35rem, 100% 50rem;
+    background-position: top, 0 30rem;
+  }
+}

@@ -1,0 +1,54 @@
+@use '../../abstract' as a;
+
+.features {
+  display: grid;
+  justify-items: center;
+  grid-template: repeat(3, 1fr) / 1fr;
+  gap: 2.5rem;
+  width: min(70rem, 90%);
+  color: var(--clr-primary-color-purple);
+
+  @include a.breakpoint(medium) {
+    grid-template: repeat(3, 1fr) / 1fr;
+  }
+
+  @include a.breakpoint(large) {
+    grid-template: 1fr/ repeat(3, 1fr);
+  }
+
+  & > * {
+    display: grid;
+    grid-template: repeat(2, auto) / 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+
+    @include a.breakpoint(medium) {
+      width: min(35rem, 95%);
+      text-align: left;
+      grid-template: 1fr / repeat(2, auto);
+    }
+
+    @include a.breakpoint(large) {
+      width: auto;
+      text-align: left;
+      grid-template: repeat(2, auto) / 1fr;
+    }
+
+    & > * {
+      display: grid;
+      gap: 1rem;
+    }
+  }
+
+  &__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 1px solid var(--clr-primary-color-grey);
+    border-radius: 50rem;
+  }
+}

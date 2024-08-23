@@ -3,3 +3,37 @@
 :root {
   @include a.map-to-root(clr, a.$colors);
 }
+
+body {
+  background-color: var(--clr-background);
+
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 3.5rem 1rem;
+  color: var(--clr-white);
+  background-color: var(--clr-primary-color-purple);
+
+  @include a.breakpoint(medium) {
+    padding: 3.5rem 2.5rem;
+  }
+}
+
+main {
+  display: grid;
+  justify-items: center;
+}
+
+footer {
+  display: grid;
+  justify-items: center;
+  gap: 4rem;
+  margin: 8rem 0;
+
+  & > * {
+    display: flex;
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,59 @@
+@use '../../abstract' as a;
+
+.hero {
+  display: grid;
+  gap: 4rem;
+  justify-items: center;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  color: var(--clr-white);
+
+  &__header {
+    width: min(90%, 40rem);
+    text-align: center;
+  }
+
+  &__image {
+    width: min(22rem, 90%);
+
+    @include a.breakpoint(medium) {
+      width: min(35rem, 90%)
+    }
+
+    @include a.breakpoint(large) {
+      width: min(45rem, 90%)
+    }
+  }
+
+  &__decoration-image-left {
+    display: none;
+    position: absolute;
+
+    @include a.breakpoint(medium) {
+      display: inline;
+      left: -14rem;
+    }
+
+    @include a.breakpoint(large) {
+      left: -8rem;
+      top: -2rem;
+    }
+  }
+
+  &__decoration-image-right {
+    display: none;
+    position: absolute;
+
+    @include a.breakpoint(medium) {
+      display: inline;
+      right: -6rem;
+      top: 15rem;
+    }
+
+    @include a.breakpoint(large) {
+      right: -4rem;
+      top: 15rem;
+    }
+  }
+}

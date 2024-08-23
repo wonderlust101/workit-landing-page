@@ -2,5 +2,58 @@
 
 h1, h2, h3, h4,
 h5, h6, p {
+  font-family: 'Franuces', serif;
+}
 
+h1 {
+  font-size: 3.125rem;
+  font-weight: 500;
+  line-height: 1;
+
+  @include a.breakpoint(medium) {
+    font-size: 5rem;
+  }
+
+  @include a.breakpoint(large) {
+    font-size: 5rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+
+  @include a.breakpoint(medium) {
+    font-size: 3rem;
+  }
+
+  @include a.breakpoint(large) {
+    font-size: 3.5rem;
+  }
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.25;
+
+  @include a.breakpoint(large) {
+    font-size: 2rem;
+  }
+}
+
+p, a, button {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+
+  @include a.breakpoint(medium) {
+    font-size: 1.125rem;
+  }
+}
+
+.underline {
+  text-decoration: underline 3px var(--clr-primary-color-green);
+  text-underline-offset: 0.625rem;
 }
